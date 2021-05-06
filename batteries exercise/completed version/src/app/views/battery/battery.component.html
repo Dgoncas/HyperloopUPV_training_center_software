@@ -1,0 +1,54 @@
+<div class="battery-wrapper">
+
+    <div class="image-wrapper">
+
+
+
+        <div [ngStyle]="this.buildClipStyle()" class="battery-filling-percentage-clip">
+
+            <div [ngStyle]="this.buildColorStyle()" class="battery-filling">
+
+                <svg xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <clipPath id="battery-filling-clip">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M66.5 5C57.9396 5 51 11.9396 51 20.5V32H25C13.9543 32 5 40.9543 5 52V257C5 268.046 13.9543 277 25 277H154C165.046 277 174 268.046 174 257V52C174 40.9543 165.046 32 154 32H128V20.5C128 11.9396 121.06 5 112.5 5H66.5Z" fill="#6AFF94"/>
+                        </clipPath>
+                    </defs>
+                </svg>
+
+            </div>
+
+        </div>
+
+        <img src="/assets/images/battery-outline.svg" class="battery-outline" alt="battery outline">
+    </div>
+
+    <div class="information-wrapper">
+
+        <span class="battery-title">battery nº {{this.battery.getId()}}</span>
+
+        <div class="information-table-wrapper">
+
+            <table class="information-table">
+                <tr>
+                    <td class="measure-title">voltage:</td>
+                    <td class="measure-value">{{this.battery.getVoltage()}}</td>
+                    <td class="measure-units">V</td>
+                </tr>
+                <tr>
+                    <td class="measure-title">temp1:</td>
+                    <td class="measure-value">{{this.battery.getTemperature1()}}</td>
+                    <td class="measure-units">deg</td>
+                </tr>
+                <tr>
+                    <td class="measure-title">temp2:</td>
+                    <td class="measure-value">{{this.battery.getTemperature2()}}</td>
+                    <td class="measure-units">Deg</td>
+                </tr>
+            </table>
+
+        </div>
+
+    </div>
+
+</div>

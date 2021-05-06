@@ -1,0 +1,67 @@
+.battery-wrapper{
+    display: flex;
+    flex-direction: row;
+    width: min-content;
+    gap: 20px;
+    padding: 40px;
+    margin: 20px;
+    box-shadow: 0px 0px 16px rgba(0,0,0, 0.25);
+    border-radius: 20px;
+
+    .image-wrapper{
+        position: relative;
+
+        .filling{
+            position:absolute;
+            top: 0;
+            left: 0;
+        }
+
+    }
+
+    .information-wrapper{
+        display: flex;
+        flex-direction: column;
+        min-width: 225px;
+
+        .title{
+            text-align: center;
+        }
+
+        .table-wrapper{
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: stretch;
+
+            table{
+                width: 100%;
+
+                tr{
+                    td{
+                        padding: 10px 0;
+                    }
+                }
+
+            }
+
+            .property-value{
+                flex-grow: 1;
+                width: 100%;
+                text-align: right;
+            }
+
+            .property-units{
+                text-align: right;
+            }
+
+            .property-title{
+                text-align: right;
+            }
+
+
+        }
+
+    }
+
+}

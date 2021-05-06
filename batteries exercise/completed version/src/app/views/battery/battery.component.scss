@@ -1,0 +1,90 @@
+.battery-wrapper{
+    display: flex;
+    width: min-content;
+    flex-direction: row;
+    padding: 40px;
+    margin: 20px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+
+    .image-wrapper{
+        display: inline-block;
+        position: relative;
+
+        .battery-outline{
+            position: relative;
+            z-index: 1;     
+        }
+
+        .battery-filling-percentage-clip{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transition: clip-path;
+            transition-duration: 250ms;
+
+            .battery-filling{
+                z-index: 0;
+                width: 100%;
+                height: 100%;
+                background-color: green;
+                clip-path: url('#battery-filling-clip');
+            }
+
+        }
+
+
+    }
+
+    .information-wrapper{
+        display: flex;
+        flex-direction: column;
+        padding-left: 20px;
+
+        .battery-title{
+            font-size: 36px;
+            width: max-content;
+        }
+
+        .information-table-wrapper{
+            display: flex;
+            align-items: center;
+            justify-content: stretch;
+            flex-grow: 1;
+
+            .information-table{
+                width: 100%;
+
+                tr{
+                    font-size: 24px;
+
+                    td{
+                        padding: 10px 0;
+                    }
+
+                    .measure-title{
+                        text-align: right;
+                    }
+
+                    .measure-value{
+                        padding-right: 20px;
+                        text-align: right;
+                        width: 100%;
+                    }
+
+                    .measure-units{
+                        text-align: right;
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+}
